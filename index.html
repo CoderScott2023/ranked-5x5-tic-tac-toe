@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe 5x5 - Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .board {
+            display: grid;
+            grid-template-columns: repeat(5, 80px);
+            grid-gap: 5px;
+        }
+        .cell {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #000;
+            font-size: 2rem;
+            cursor: pointer;
+            background-color: #f0f0f0;
+        }
+        .cell.taken {
+            pointer-events: none;
+        }
+        #status {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+        #rankings {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tic Tac Toe 5x5</h1>
+    <div class="board" id="board"></div>
+    <div id="status">Player X's turn</div>
+    <button id="restart">Restart</button>
+    <div id="rankings">
+        <h2>Rankings</h2>
+        <ul id="ranking-list"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
